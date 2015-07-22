@@ -1,35 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.wearable.view.BoxInsetLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/framelayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:background="@drawable/mentops">
 
-    <RelativeLayout
-        android:id="@+id/frame_layout"
-        android:layout_height="match_parent"
+    <android.support.wearable.view.GridViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:background="@drawable/mentops"
-        app:layout_box="left|bottom|right">
+        android:layout_height="match_parent"/>
 
-        <android.support.wearable.view.WearableListView
-            android:id="@+id/wearable_List"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:scrollbars="none"
-            android:dividerHeight="0dp">
-        </android.support.wearable.view.WearableListView>
+    <android.support.wearable.view.DotsPageIndicator
+        android:id="@+id/page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom" />
 
-        <!--<TextView-->
-            <!--android:id="@+id/header"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="60dp"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:gravity="bottom"-->
-            <!--android:textSize="20sp"-->
-            <!--android:fontFamily="sans-serif-light"-->
-            <!--android:text="Category"/>-->
+</FrameLayout>
 
-    </RelativeLayout>
-</android.support.wearable.view.BoxInsetLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.wearable.view.BoxInsetLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_width="match_parent">-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/frame_layout"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@drawable/mentops"-->
+        <!--app:layout_box="left|bottom|right">-->
+
+        <!--<android.support.wearable.view.WearableListView-->
+            <!--android:id="@+id/wearable_List"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:scrollbars="none"-->
+            <!--android:dividerHeight="0dp">-->
+        <!--</android.support.wearable.view.WearableListView>-->
+        <!-- -->
+        <!-- -->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/header"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="60dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="bottom"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="20sp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:fontFamily="sans-serif-light"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Category"/>&ndash;&gt;-->
+
+    <!--</RelativeLayout>-->
+<!--</android.support.wearable.view.BoxInsetLayout>-->
