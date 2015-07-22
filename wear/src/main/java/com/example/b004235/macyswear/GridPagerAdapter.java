@@ -40,10 +40,6 @@ import java.util.List;
 /**
  * Constructs fragments as requested by the GridViewPager. For each row a different background is
  * provided.
- * <p>
- * Always avoid loading resources from the main thread. In this sample, the background images are
- * loaded from an background task and then updated using {@link #notifyRowBackgroundChanged(int)}
- * and {@link #notifyPageBackgroundChanged(int, int)}.
  */
 public class GridPagerAdapter extends FragmentGridPagerAdapter {
     private static final int TRANSITION_DURATION_MILLIS = 100;
