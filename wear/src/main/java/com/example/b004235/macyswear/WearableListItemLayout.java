@@ -33,8 +33,8 @@ public class WearableListItemLayout extends LinearLayout
                                   int defStyle) {
         super(context, attrs, defStyle);
 
-        mUnselectedCircleColor = Color.parseColor("#111111");
-        mSelectedCircleColor = Color.parseColor("#111111");
+        mUnselectedCircleColor = Color.parseColor("#000000");
+        mSelectedCircleColor = Color.parseColor("#000000");
 //        mSmallCircleRadius = getResources().
 //                getDimensionPixelSize(R.dimen.small_circle_radius);
 //        mBigCircleRadius = getResources().

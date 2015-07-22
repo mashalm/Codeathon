@@ -16,6 +16,8 @@ package com.example.b004235.macyswear;
 public class WearableAdapter extends WearableListView.Adapter {
     private ArrayList<Integer> mItems;
     private final LayoutInflater mInflater;
+    private ArrayList<String> categories = new ArrayList<>();
+
 
     public WearableAdapter(Context context, ArrayList<Integer> items) {
         mInflater = LayoutInflater.from(context);
@@ -23,8 +25,16 @@ public class WearableAdapter extends WearableListView.Adapter {
     }
 
     @Override
-    public WearableListView.ViewHolder onCreateViewHolder(
-            ViewGroup viewGroup, int i) {
+    public WearableListView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        categories.add("Men");
+        categories.add("Women");
+        categories.add("Juniors");
+        categories.add("Kids");
+        categories.add("Shoes");
+        categories.add("Beauty");
+        categories.add("Watches");
+        categories.add("Jewelry");
+        categories.add("Bed & Bath");
         return new ItemViewHolder(mInflater.inflate(R.layout.list_item, null));
     }
 
@@ -35,7 +45,7 @@ public class WearableAdapter extends WearableListView.Adapter {
         CircledImageView circledView = itemViewHolder.mCircledImageView;
         circledView.setImageResource(mItems.get(position));
         TextView textView = itemViewHolder.mItemTextView;
-        textView.setText(String.format("Item %d", position + 1));
+        textView.setText(String.format(categories.get(position)));
     }
 
     @Override
